@@ -15,6 +15,9 @@ const App = () => {
     return setThemeMode("light")
   }
 
+ 
+
+
   useEffect(()=>{
     const root= document.documentElement;
     root.classList.remove('light','dark');
