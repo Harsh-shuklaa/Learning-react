@@ -1,0 +1,37 @@
+*{
+  margin: 0%;
+  padding: 0%;
+
+}
+html,
+body{
+  height: 100%;
+  width: 100% ;
+  background: #333;
+}
+.parent{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+  
+  width:fit-content;
+  background-color:cornflowerblue;
+  padding: 10px 70px;
+  margin: 5px;
+  font-size: 100px;
+   align-items: center;;
+  
+
+}
+
+button{
+  margin: 5px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: blueviolet;
+  border: none;
+}

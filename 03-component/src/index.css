@@ -1,0 +1,26 @@
+.Card{
+  background-color: rgb(208, 175, 181);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  height: 400px;
+  width: 200px;
+ 
+
+ 
+  
+
+}
+.parentCard{
+  display: inline-flex;
+ flex-wrap: wrap;
+  justify-content: space-between;
+}
+.navbar{
+  background-color: blueviolet;
+  color: white;
+  height: 40px;
+  padding: 10px;
+  margin: 10;
+
+}

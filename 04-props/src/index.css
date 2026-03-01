@@ -1,0 +1,42 @@
+*{
+  color: white;
+}
+  body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+  .parent{
+    display: flex;
+   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  }
+.Card{
+ 
+  width: 200px;
+  border: 1px solid white ;
+  background-color: #333;
+ text-align: center;
+ padding: 20px;
+ border-radius: 5px;
+ 
+}
+.Card button{
+  padding: 10px 20px ;
+ color: #333;
+ border: none;
+ border-radius: 5px;
+}
+.Card p {
+  margin: 20px;
+
+}
+.Card img{
+ 
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius:50% ;
+  object-fit: cover;
+}
