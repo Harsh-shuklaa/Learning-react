@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { Link, Route, Routes, NavLink, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -9,22 +9,40 @@ import Setting from "./pages/Setting";
 import Navbar from "./components/Navbar";
 import Course from "./pages/Course";
 import CourseDetail from "./pages/CourseDetail";
+import Theme from "./Theme";
+import { useState } from "react";
 
 const App = () => {
- 
-
+ const [theme, setTheme] = useState("light")
   const navigate = useNavigate();
- 
+
   return (
     <div>
       <Navbar />
 
-      <button onClick={()=>{
-       
-        navigate(-1)
-      }}>Return to Home</button>
+      <h2>Theme is {theme} </h2>
+      <Theme theme={theme}  setTheme={setTheme}/>
+
+
+      
+
+      <button
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Return to Home
+      </button>
+      <button
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Back
+      </button>
       <Routes>
         <Route path="/" element={<Home />} />
+       
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/dashboard" element={<Dashboard />}>
@@ -33,9 +51,10 @@ const App = () => {
         </Route>
         <Route path="/course" element={<Course />} />
         <Route path="course/:id" element={<CourseDetail />} />
+        
       </Routes>
 
-      <div>This is footer </div>
+      <div className="footer">This is footer </div>
     </div>
   );
 };

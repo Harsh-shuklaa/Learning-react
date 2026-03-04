@@ -7,7 +7,8 @@ const Navbar = () => {
     { path: "/about", name: "About" },
     { path: "/dashBoard", name: "DashBoard" },
     { path: "/course", name: "Course" },
-    { path: "/contact", name: "Contact" }
+    { path: "/contact", name: "Contact" },
+   
   ];
   return (
     <div>

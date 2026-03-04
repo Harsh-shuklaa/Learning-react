@@ -49,6 +49,7 @@ const Home = () => {
   }, []);
 
   return (
+    
     <div className="pt-24 bg-black text-white min-h-screen relative overflow-hidden">
 
       {/* Glow Background */}
@@ -64,7 +65,7 @@ const Home = () => {
           {/* LEFT SIDE */}
           <div className="text-left">
 
-            <p className="uppercase tracking-widest text-sm text-blue-400 mb-6">
+            <p className="uppercase tracking-widest text-sm text-blue-400 mb-6  ">
               Enter The Arena
             </p>
 
@@ -89,14 +90,14 @@ const Home = () => {
               <button
                 ref={buttonRef}
                 onClick={() => navigate("/arena")}
-                className="bg-blue-600 hover:bg-blue-700 transition px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/20"
+                className="bg-blue-600 hover:bg-blue-700 active:scale-95 transition px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/20"
               >
                     ⚔️ Enter Arena
               </button>
 
               <button
                 onClick={() => navigate("/leaderboard")}
-                className="border border-gray-600 hover:border-white transition px-8 py-4 rounded-lg text-lg"
+                className="border border-gray-600 hover:border-white transition px-8 py-4 rounded-lg text-lg active:scale-95"
               >
                 🏆 View Rankings
               </button>
@@ -248,7 +249,7 @@ const Home = () => {
 
         <button
           onClick={() => navigate("/arena")}
-          className="mt-10 bg-blue-600 hover:bg-blue-700 transition px-10 py-5 rounded-xl text-xl font-semibold shadow-xl shadow-blue-500/30"
+          className="mt-10 bg-blue-600 hover:bg-blue-700  active:scale-95 transition px-10 py-5 rounded-xl text-xl font-semibold shadow-xl shadow-blue-500/30"
         >
           Start Your First Battle
         </button>

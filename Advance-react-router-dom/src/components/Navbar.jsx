@@ -65,7 +65,7 @@ const Navbar = () => {
                   type="text"
                   placeholder="Search battles..."
                   className="pl-10 pr-4 py-2 rounded-md 
-                             bg-gray-900 border border-gray-700 
+                             bg-zink-900 border border-gray-700 
                              text-sm text-white
                              focus:outline-none focus:border-blue-500
                              transition"

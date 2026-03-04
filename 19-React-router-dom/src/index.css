@@ -12,6 +12,15 @@ html,body{
   width: 100%;
 }
 
+h1{
+  
+  text-align: center;
+  margin-top: 200px;
+}
+h2{
+  text-align: center;
+}
+
 .nav{
   display: flex;
   justify-content: space-between;
@@ -44,5 +53,24 @@ html,body{
   border-radius: 50%;
   padding: 20px;
    
+}
+button,.link{
+  background-color: blueviolet;
+  color: white;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight:bold ;
+}
+.footer{
+  background-color:rgba(255, 255, 255, 0.652) ;
+  color: black;
+  margin-top: 180px;
+  text-align: center ;
+  padding: 30px;
+  font-size: large;
+   font-weight:bold ;
+  
+  
 }
 

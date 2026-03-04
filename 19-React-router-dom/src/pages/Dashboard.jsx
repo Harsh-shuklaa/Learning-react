@@ -5,8 +5,8 @@ const Dashboard = () => {
   return (
     <div>
      
-       <Link  to='/dashboard/profile'>Profile</Link>
-       <Link to='/dashboard/setting'>Setting</Link>
+       <Link className='link' to='/dashboard/profile'>Profile</Link>
+       <Link className='link' to='/dashboard/setting'>Setting</Link>
       
       <h1>Dashboard</h1>
       <Outlet/>
