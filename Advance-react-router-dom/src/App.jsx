@@ -17,7 +17,7 @@ const App = () => {
     
 
     
-
+{/* <Navbar/> */}
      <Routes>
       <Route  path='/' element={<Home/>} />
       <Route  path='/arena' element={<Arena/>} />
@@ -31,7 +31,7 @@ const App = () => {
 
       
      </Routes>
-      <Footer/>
+    
     </div>
   )
 }

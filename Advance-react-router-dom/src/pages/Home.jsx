@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import anime from "animejs";
 import BattleSimulation from "../components/BattleSimulation";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -49,8 +51,10 @@ const Home = () => {
   }, []);
 
   return (
+  
     
     <div className="pt-24 bg-black text-white min-h-screen relative overflow-hidden">
+        <Navbar/>
 
       {/* Glow Background */}
       <div
@@ -255,7 +259,10 @@ const Home = () => {
         </button>
       </section>
 
+       
+ <Footer/>
     </div>
+    
   );
 };
 
