@@ -9,7 +9,7 @@ const ThemeContext = (props) => {
   return <div>
 
    <ThemeDataContext.Provider value={[theme,setTheme]}>
-     {props.children}
+     {props.children} 
 
    </ThemeDataContext.Provider>
   
