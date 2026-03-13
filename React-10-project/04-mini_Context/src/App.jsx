@@ -6,7 +6,7 @@ import Profile from "./components/Profile"
 const App = () => {
   
   return (
-    <div className='bg-red-400'>
+    <div className=''>
      <Login/>
      <Profile/>
     </div>
