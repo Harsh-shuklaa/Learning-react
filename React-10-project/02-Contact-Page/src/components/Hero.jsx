@@ -1,26 +1,27 @@
 import React from 'react'
+import ContactHeader from './ContactHeader'
+import {MessageCircleMore, Phone, SendHorizontal} from 'lucide-react'
 
 const Hero = () => {
   return (
-    <div className='text-white flex flex-col m-25'>
-      <div className='flex flex-col '>
-        <h1 className='text-4xl font-bold ' >Contact Us</h1>
-        <p className='pt-4 w-300'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus repellendus, blanditiis ipsam non aperiam praesentium et fugiat laboriosam magni nisi culpa perferendis sapiente similique. Voluptas quia exercitationem atque officiis quod.
-        Delectus nesciunt dignissimos culpa!  laboriosam mollitia? Iste sint eligendi natus sunt dolores tempora eius dolorem enim mollitia dignissimos, ipsa nam ullam? .</p>
-      </div>
-      <div className=' flex flex-col mt-10'>
-     <div className=' flex flex-col'>
-           <div className='flex gap-5'>
-            <button className='bg-white rounded text-black px-5 py-1'>Via Support Chat</button>
-            <button className='bg-white rounded text-black px-5 py-1'>Via Support Call </button>
+    <div className=' flex flex-col m-25'>
+      <ContactHeader/>
+     
+      <div className=' flex flex-col m-4'>
+     <div className=' flex flex-col mt-5'>
+           <div className='flex gap-5 '>
+            <button className='bg-black rounded text-white px-8.5 py-1 flex gap-2 hover:cursor-pointer active:scale-95' > <MessageCircleMore size={20} strokeWidth={2} />Via Support Chat</button>
+            <button className='bg-black rounded text-white px-8.5 py-1 flex gap-2 hover:cursor-pointer active:scale-95'><Phone size={20} />Via Support Call </button>
         </div >
         <div className='flex flex-col '>
-            <h1 className='w-84  border mt-4 text-center rounded py-1' >Via Email Form</h1>
-            <div className='flex flex-col '>
-                <input className='' placeholder='Name' type="text" />
-            <input type="email"  className='' placeholder='Email'/>
-            <textarea name="" id="" placeholder='Text'></textarea>
-            <button>Submit</button>
+            <h1 className='border mt-4 text-center rounded py-1 px-8 w-full max-w-md' >Via Email Form</h1>
+            <div className='flex flex-col   m-6 w-full max-w-sm  '>
+                <input className=' outline-1  rounded m-2' placeholder='Name' type="text" />
+            <input type="email"  className='outline-1 m-2  rounded' placeholder='Email'/>
+            <textarea name="" id="" className='outline-1 m-2  rounded'  placeholder='Text'></textarea>
+           <div className='flex justify-end m-2'>
+             <button className='bg-black rounded text-white px-8.5 py-1 flex gap-2 hover:cursor-pointer active:scale-95 '> <SendHorizontal size={20} />Submit</button>
+           </div>
             </div>
 
             <div>

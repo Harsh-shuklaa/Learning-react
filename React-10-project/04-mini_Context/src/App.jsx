@@ -1,15 +1,20 @@
 import Login from "./components/Login"
 import Profile from "./components/Profile"
+import UserContextProvider from "./Context/UserContextProvider"
 
 
 
 const App = () => {
   
   return (
-    <div className=''>
-     <Login/>
+ <UserContextProvider>
+     <div className=''>
+    
+       <Login/>
      <Profile/>
+   
     </div>
+ </UserContextProvider>
   )
 }
 
