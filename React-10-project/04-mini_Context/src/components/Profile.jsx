@@ -4,7 +4,7 @@ import { UserContext } from '../Context/UserContextProvider'
 const Profile = () => {
 
   const {user} = useContext(UserContext);
-console.table(user)
+// console.table(user)
   
   return (
     <div>
