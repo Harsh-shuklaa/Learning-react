@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
     name:'search',
     initialState:{
        query:"",
-       activeTab:"photos",
+       activeTab:"videos",
        result:[],
        loading:false,
        error:null

@@ -8,9 +8,7 @@ const SearchBar = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-   dispatch(()=>{
-    setQuery(input)
-   })
+   dispatch(setQuery(input))
     setInput("");
   };
 
