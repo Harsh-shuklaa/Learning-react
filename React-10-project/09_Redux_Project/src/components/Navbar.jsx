@@ -1,5 +1,6 @@
+import { isAction } from '@reduxjs/toolkit'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -8,12 +9,12 @@ const Navbar = () => {
         <h2 className="  text-white text-2xl   font-bold capitalize">Media Search</h2>{" "}
       
       <div className="flex gap-5">
-        <Link to="/search"> Search</Link>
-        <Link to="/collectiion"> Colection</Link>
+        <Link  className='bg-white px-3 py-1 rounded text-black active:scale-95 hover:cursor-pointer ' to="/home"> Search</Link>
+        <NavLink  className={({isActive})=>` bg-white px-3 py-1 rounded text-black active:scale-95 hover:cursor-pointer  ${isActive ? "" : ""}`}   to="/collectiion"> Collection</NavLink>
       </div>
       </div>
     </div>
-  )
+  )  
 }
 
 export default Navbar

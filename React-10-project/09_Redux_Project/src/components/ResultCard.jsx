@@ -1,28 +1,18 @@
 
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { addCollection, addToast } from '../redux/feature/collectionSlice'
+import { ToastContainer, toast } from 'react-toastify';
 
-const ResultCard = ({item}) => {   
-//  function addToCollection(item){
-//  const oldData = JSON.parse(localStorage.getItem("collection")) || []
-//  console.log(oldData);
- 
-//  const newData = [...oldData,item]
-//  console.log(newData);
+const ResultCard = ({item}) => {  
+  const dispatch = useDispatch() 
 
-//  localStorage.setItem("collection",JSON.stringify(newData))
-
- 
-//  }
 
 
 function addToCollection (item){
-   const oldData =  JSON.parse(localStorage.getItem("collection")) || []
-   console.log(oldData);
+   dispatch(addCollection(item))
+   dispatch(addToast())
 
-   const newData = [...oldData,item]
-   console.log(newData);
-
-    localStorage.setItem( 'collection',JSON.stringify(newData));
    
    
    
@@ -43,6 +33,7 @@ function addToCollection (item){
       className='bg-indigo-600 text-white rounded px-2 py-1 hover:cursor-pointer active:scale-95 font-medium '>
         Save
         </button>
+        <ToastContainer/>
       </div>
      
     </div>
