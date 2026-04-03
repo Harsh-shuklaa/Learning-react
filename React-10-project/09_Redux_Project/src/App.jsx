@@ -1,8 +1,9 @@
-import React from 'react'
 
+import { Outlet } from 'react-router-dom'
+import CollectionPage from './pages/CollectionPage'
+import HomePage from './pages/HomePage'
 import SearchBar from './components/SearchBar'
-import Tabs from './components/Tabs'
-import ResultGrid from './components/ResultGrid'
+import Navbar from './components/Navbar'
 
 const App = () => {
 
@@ -10,9 +11,11 @@ const App = () => {
 
   return (
     <div className='min-h-screen w-full text-white bg-gray-950'>
-      <SearchBar/>
-      <Tabs/>
-      <ResultGrid/>
+      <Navbar/>
+      
+      <Outlet/>
+  
+   
      
     </div>
   )

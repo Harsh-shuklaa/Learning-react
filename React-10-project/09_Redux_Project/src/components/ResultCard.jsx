@@ -2,15 +2,31 @@
 import React from 'react'
 
 const ResultCard = ({item}) => {   
- function addToCollection(item){
- const oldData = JSON.parse(localStorage.getItem("collection")) || []
- const newData = [...oldData,item]
- console.log(newData);
+//  function addToCollection(item){
+//  const oldData = JSON.parse(localStorage.getItem("collection")) || []
+//  console.log(oldData);
+ 
+//  const newData = [...oldData,item]
+//  console.log(newData);
 
- localStorage.setItem("collection",JSON.stringify(newData))
+//  localStorage.setItem("collection",JSON.stringify(newData))
 
  
- }
+//  }
+
+
+function addToCollection (item){
+   const oldData =  JSON.parse(localStorage.getItem("collection")) || []
+   console.log(oldData);
+
+   const newData = [...oldData,item]
+   console.log(newData);
+
+    localStorage.setItem( 'collection',JSON.stringify(newData));
+   
+   
+   
+}
   
   return (
     <div className='  relative bg-white w-[18vw] h-80 rounded-md '>

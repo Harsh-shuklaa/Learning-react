@@ -2,8 +2,8 @@ import React from 'react'
 
 const CollectionPage = () => {
   return (
-    <div>
-      
+    <div className='text-white'>
+      collectionPage 
     </div>
   )
 }
