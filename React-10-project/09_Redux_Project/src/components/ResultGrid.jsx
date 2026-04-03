@@ -22,13 +22,14 @@ const ResultGrid = () => {
      const getData = async () => {
       let data=[];
       if (activeTab == "photos") {
-        let response = await fetchPhotos(query);
+        let response = await fetchPhotos(query); 
         data = response.results.map((item) => ({
           id: item.id,
           type: "photo",
           title: item.alt_description,
           thumbnail: item.urls.small,
-          url: item.urls.full,
+          src: item.urls.full,
+          url: item.links.html
         }));
         
       } if (activeTab == "videos") {
@@ -39,6 +40,7 @@ const ResultGrid = () => {
           title: item.user.name || "video",
           thumbnail: item.image,
           src: item.video_files[0].link,
+          url:item.url
         }));
       }
       dispatch(setResult(data))
@@ -48,7 +50,7 @@ const ResultGrid = () => {
    } catch (err) {
     dispatch(setError(err.message))
    }
-  }, [query, activeTab]);
+  }, [query, activeTab,dispatch]);
 
   if(error) return  <h1>Error</h1>
   if(loading) return  <h1>Loading....</h1>
@@ -58,7 +60,7 @@ const ResultGrid = () => {
     <div className="flex  justify-between w-full items-center  flex-wrap gap-6 overflow-auto p-5">
       {
         result.map((item,idx )=>{
-        return <ResultCard  key={idx} item={item}/>
+        return <a href={item.url}><ResultCard  key={idx} item={item}/></a>
         })
       }
     </div>
