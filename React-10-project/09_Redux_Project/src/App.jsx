@@ -4,7 +4,7 @@ import CollectionPage from './pages/CollectionPage'
 import HomePage from './pages/HomePage'
 import SearchBar from './components/SearchBar'
 import Navbar from './components/Navbar'
-import { addCollection } from './redux/feature/collectionSlice'
+
 
 const App = () => {
 
@@ -16,7 +16,7 @@ const App = () => {
       
       <Outlet/>
 
-      <button onClick={addCollection}>click</button>
+     
   
    
      
